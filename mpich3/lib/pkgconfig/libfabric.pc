@@ -1,0 +1,14 @@
+prefix=/home/liux7/HPCG/mpich3
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libfabric
+Description: OFI-WG libfabric
+URL: https://github.com/ofiwg/libfabric.git
+Version: 1.10.1
+Requires:
+Cflags: -I${includedir}
+Libs: -L${libdir} -lfabric 
+Libs.private:  -lrt -latomic -lpthread -ldl
+Requires.private:
